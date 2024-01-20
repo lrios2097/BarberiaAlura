@@ -1,50 +1,156 @@
-.titulo-principal{
- padding-left: 30px;  
+header{
+    background-color: #BBBBBB;
+    padding: 20px 0; /* 20px ára superior e inferioro, 0 para los laterales*/
 }
 
-#banner{
-    width: 100%;
+.caja{
+    width: 940px; /* ancho de 940pixeles, porque la mayoria tiene 1280px, 940px es el 70% */
+    position: relative; /* que la caja y el menu tengan los 940px */
+    margin: 0 auto; /* le ponem,os 0 en superior e inferior y automatico para los bordes para que se ponga en el centro */
 }
 
-.titulo-centralizado{
-    text-align: center;
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0px;
 }
 
-p{
-    text-align: center;
+nav li{
+    display: inline;
+    margin: 0 0 0 15px; /*El margen para que los titulos no esten tan pegados */
 }
 
-em strong{
-    color:#FF0000;
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none; /*para que no salga el subrallado automatico cuando es un vínculo */
 }
 
-#mision{
-    font-size: 20px;
+nav a:hover{ /*Captura el movimiento del mouse */
+    color: #C78C19;
+    text-decoration: underline;
 }
 
-.principal{
-    background: #CCCCCC;
-    padding: 20px;
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
 }
 
-.diferenciales {
-    background: #FFFFFF; 
-    padding: 30px;
-}
-
-
-
-.items{
-    font-style: italic;
-}
-
-ul{
+.productos li{
     display: inline-block;
+    text-align: center;
+    width: 30%; /*para que ocupen el mismo espacio y no de cuantos carateres tengas escritos*/
     vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
+    /*background: #CCCCCC;*/
+    margin: 0 1.5%; /*Espacio externo entre los elementos  vertical, horizontal*/
+    padding: 30px 20px;
+    box-sizing: border-box; /*para que no pasen el 30%* por ejemplo a la izquierda si da 20px pero a la derecha nom poruqe se pasa del porcentaje y delos 940px*/
+    /*border-color: #000000;
+    border-width: 2px;
+    border-style: solid;*/
+    border: 2px solid #000000;
+    border-radius: 10px;
 }
 
-.imagenDiferenciales{
+.productos li:hover{
+    border-color: #C78C19;
+}
+
+.productos li:active{ /*para cuando hago click*/
+    border-color: #088C19;
+    
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{ /*para cuando le de click se aumente el tamañp de la letra*/
+    font-size: 33px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}
+
+main{
+    width: 940px;
+    margin: 0 auto;
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block; /* para que salgan vertical nombre*/
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
     width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all; /* all para que cambie tanto al background como el transform*/
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.20);
+    /*transform: rotate(70deg);*/
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
 }
